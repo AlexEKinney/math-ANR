@@ -1,5 +1,6 @@
 package net.kincode.maths
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var auth : FirebaseAuth
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -21,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
         val email = intent.getStringExtra("email")
         val displayName = intent.getStringExtra("name")
 
-        findViewById<TextView>(R.id.textView).text = email + "\n" + displayName
+        findViewById<TextView>(R.id.textView).text = "Welcome, "+displayName
 
         findViewById<Button>(R.id.signOutBtn).setOnClickListener {
             auth.signOut()

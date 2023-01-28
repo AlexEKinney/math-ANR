@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Maths In Wisconsin</string>
     <string name="sign_in_with_google">Sign In With Google</string>
+    <string name="homework">Homework</string>
+    <string name="classes">Classes</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="textview">TextView</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

@@ -2,11 +2,11 @@ package net.kincode.maths
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.codingstuff.googlesignin_kt.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -27,6 +27,16 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+
+        val user = FirebaseAuth.getInstance().currentUser
+        if(user != null){
+            val intent : Intent = Intent(this , HomeActivity::class.java)
+            intent.putExtra("name" , user.displayName)
+            startActivity(intent)
+        } else {
+            var toast = Toast.makeText(applicationContext, "Please Sign In.", Toast.LENGTH_SHORT)
+            toast.show()
+        }
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
