@@ -1,4 +1,4 @@
-package net.kincode.maths
+package net.kincode.math
 
 import org.junit.Test
 
