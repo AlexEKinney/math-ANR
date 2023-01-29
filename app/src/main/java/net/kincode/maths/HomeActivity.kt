@@ -25,9 +25,9 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.textView).text = "Welcome, "+displayName
 
-        findViewById<Button>(R.id.signOutBtn).setOnClickListener {
-            auth.signOut()
-            startActivity(Intent(this , MainActivity::class.java))
-        }
+//        findViewById<Button>(R.id.signOutBtn).setOnClickListener {
+//            auth.signOut()
+//            startActivity(Intent(this , MainActivity::class.java))
+//        }
     }
 }
