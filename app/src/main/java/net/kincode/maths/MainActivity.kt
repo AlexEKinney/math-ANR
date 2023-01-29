@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.codingstuff.googlesignin_kt.R
+import net.kincode.maths.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var googleSignInClient : GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        auth = FirebaseAuth.getInstance()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -31,7 +32,9 @@ class MainActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         if(user != null){
             val intent : Intent = Intent(this , HomeActivity::class.java)
+            intent.putExtra("email", user.email)
             intent.putExtra("name" , user.displayName)
+            intent.putExtra("uid", user.uid)
             startActivity(intent)
         } else {
             var toast = Toast.makeText(applicationContext, "Please Sign In.", Toast.LENGTH_SHORT)

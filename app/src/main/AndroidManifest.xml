@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codingstuff.googlesignin_kt">
-
+    package="net.kincode.maths">
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/math"
@@ -10,13 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleSignIn_KT">
         <activity
-            android:name="net.kincode.maths.HomeActivity"
+            android:name=".acc_activity"
+            android:exported="false"
+            android:label="@string/title_activity_acc"
+            android:theme="@style/Theme.GoogleSignIn_KT.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name="net.kincode.maths.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,5 +30,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
