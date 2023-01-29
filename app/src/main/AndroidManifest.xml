@@ -10,13 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleSignIn_KT">
         <activity
-            android:name="net.kincode.maths.HomeActivity"
+            android:name=".acc_activity"
+            android:exported="false"
+            android:label="@string/title_activity_acc"
+            android:theme="@style/Theme.GoogleSignIn_KT.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name="net.kincode.maths.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
