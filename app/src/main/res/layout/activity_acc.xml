@@ -15,13 +15,44 @@
         <TextView
             android:id="@+id/acc_text"
             android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:layout_marginTop="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"
             android:text="@string/textview"
             android:textColor="?attr/colorOnPrimary"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/button5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/signout_btn"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="75dp"
+            android:text="@string/sign_out"
+            app:icon="@drawable/math"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconSize="20dp"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"
+            android:text="@string/home"
+            app:icon="@drawable/baseline_home_24"
+            app:iconGravity="start"
+            app:iconPadding="4dp"
+            app:iconSize="20dp"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/signout_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
