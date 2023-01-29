@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             val intent : Intent = Intent(this , HomeActivity::class.java)
             intent.putExtra("email", user.email)
             intent.putExtra("name" , user.displayName)
+            intent.putExtra("uid", user.uid)
             startActivity(intent)
         } else {
             var toast = Toast.makeText(applicationContext, "Please Sign In.", Toast.LENGTH_SHORT)
