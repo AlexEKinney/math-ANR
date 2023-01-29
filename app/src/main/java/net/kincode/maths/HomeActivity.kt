@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.codingstuff.googlesignin_kt.R
+import net.kincode.maths.R
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
@@ -24,10 +24,12 @@ class HomeActivity : AppCompatActivity() {
         val displayName = intent.getStringExtra("name")
 
         findViewById<TextView>(R.id.textView).text = "Welcome, "+displayName
-
-//        findViewById<Button>(R.id.signOutBtn).setOnClickListener {
-//            auth.signOut()
-//            startActivity(Intent(this , MainActivity::class.java))
-//        }
+//auth.signOut()
+        findViewById<Button>(R.id.acc_btn).setOnClickListener {
+            val intent : Intent = Intent(this , acc_activity::class.java)
+            intent.putExtra("name" , displayName)
+            intent.putExtra("email", email)
+            startActivity(intent)
+        }
     }
 }
