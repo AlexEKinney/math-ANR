@@ -7,11 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.toColor
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import net.kincode.maths.R
 import net.kincode.maths.databinding.ActivityAccBinding
@@ -35,8 +38,13 @@ class acc_activity : AppCompatActivity() {
         Picasso.get()
             .load(photo)
             .placeholder(R.drawable.math)
-            .error(R.drawable.baseline_signal_wifi_connected_no_internet_4_24_777)
+            .error(R.drawable.baseline_account_circle_24)
             .into(imageView);
+        // Write a message to the database
+        val database = Firebase.database
+        val myRef = database.getReference("user/$uid/classes")
+
+        myRef.setValue("TEST CLASS 1")
         findViewById<TextView>(R.id.acc_text).text = "Name: "+displayName+"\nEmail: "+email+"\nUID: "+uid
         super.onCreate(savedInstanceState)
 

@@ -24,12 +24,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/signout_btn"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="75dp"
             android:text="@string/sign_out"
+            android:textColor="@color/black"
             app:backgroundTint="@color/white"
             app:icon="@drawable/math"
             app:iconGravity="start"
@@ -40,12 +41,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/home_btn"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="150dp"
             android:text="@string/home"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
             app:icon="@drawable/baseline_home_24"
             app:iconGravity="start"
             app:iconPadding="4dp"
