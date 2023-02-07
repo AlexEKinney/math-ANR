@@ -9,6 +9,8 @@
         android:id="@+id/progressBar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="0dp"
+        android:max="3"
+        android:progress="0"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/quiz_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -33,12 +35,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
+        android:clickable="false"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Maths Is Cool, yo! HIP HOP GANG!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_ans_btn" />
+
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/quesiton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -49,34 +62,25 @@
         app:layout_constraintStart_toEndOf="@+id/chip5"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <Button
+        android:id="@+id/check_ans_btn"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="1dp"
-        app:hintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chip5">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Please Enter Your Answer Here"
-            android:inputType="number"
-            android:selectAllOnFocus="true"
-            android:singleLine="false"
-            android:textSize="20sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="500dp"
         android:text="Check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter Your Answer Here!"
+        android:inputType="number|phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quesiton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

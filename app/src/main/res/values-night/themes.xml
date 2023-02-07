@@ -8,9 +8,19 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:colorAccent">#ffffff</item>
+    </style>
+    <style name="AppTheme.Custom" parent="Theme.AppCompat">
+
+        <item name="md_corner_radius">32dp</item>
+
     </style>
 </resources>
