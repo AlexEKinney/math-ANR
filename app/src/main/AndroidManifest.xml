@@ -15,10 +15,10 @@
             android:label="@string/title_activity_acc"
             android:theme="@style/Theme.GoogleSignIn_KT.NoActionBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".HomeworkActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
